@@ -1,0 +1,58 @@
+<div class="productsContainerPadre">
+    {{#if user }}
+    <div class="d-flex justify-content-between align-items-center p-3 border-bottom">
+        <h1 class="fs-6 m-0">¡Bienvenido/a {{user}}!</h1>
+        <form action="/api/sessions/logout" method="POST" class="m-0">
+            <button type="submit" class="btnDelete rounded-pill">Logout</button>
+        </form>
+    </div>
+    {{/if}}
+
+    <h2 class="h2 p-3">Todos los productos</h2>
+    {{#if products.length}}
+    <div class="productsContainerHijo p-3">
+        <div class="row">
+            {{#each products}}
+            <div class="col-sm-6 col-md-4 col-lg-3 mb-3">
+                <div class="card rounded-5">
+                    <div class="card-body shadow text-center rounded-5">
+                        <p><strong>{{title}}</strong></p>
+                        <p>Descripción: {{description}}</p>
+                        <p>Precio: {{price}}</p>
+                        <p>Código: {{code}}</p>
+                        <p>Stock: {{stock}}</p>
+                        <p>Categoría: {{category}}</p>
+                        <p>Estado:
+                            {{#if status}}
+                            Activo
+                            {{else}}
+                            Inactivo
+                            {{/if}}</p>
+                        <p>Imágenes: {{thumbnails}}</p>
+                        <div class="d-flex justify-content-center">
+                            <button type="button" class="btnDelete rounded-pill" id="btnSend">Agregar al
+                                carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    <div class="d-flex justify-content-center mt-4 mb-4">
+        {{#if hasPrevPage}}
+        <a href="?page={{prevPage}}">Anterior</a>
+        {{/if}}
+
+        {{#if currentPage}}
+        <p>Página {{currentPage}} de {{totalPages}}</p>
+        {{/if}}
+
+        {{#if hasNextPage}}
+        <a href="?page={{nextPage}}">Siguiente</a>
+        {{/if}}
+    </div>
+    {{else}}
+    <p>No hay productos cargados en el sistema.</p>
+    {{/if}}
+</div>

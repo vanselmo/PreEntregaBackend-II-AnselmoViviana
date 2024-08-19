@@ -1,0 +1,72 @@
+<div class="productsContainerPadre">
+    <h1 class="h2 p-3">Productos en tiempo real</h1>
+    {{#if products.length}}
+    <div id="productsContainer" class="productsContainerHijo p-3">
+
+
+        <div class="d-flex justify-content-center mt-4 mb-4">
+            {{#if hasNextPage}}
+            <a href="?page={{nextPage}}"> Siguiente </a>
+            {{/if}}
+            {{#if hasPrevPage}}
+            <a href="?page={{prevPage}}"> Anterior </a>
+            {{/if}}
+            {{#if hasNextPage}}
+            <p>Página {{currentPage}} de {{totalPages}} </p>
+            {{/if}}
+        </div>
+        {{else}}
+        <p>No hay productos cargados en el sistema.</p>
+        {{/if}}
+    </div>
+    <div class="row justify-content-center mb-4">
+        <div class="col-md-6 col-lg-4">
+            <h2 class="p-3 titleForm fs-4">Agregar producto</h2>
+            <form class="p-3 border rounded-3 shadow">
+                <div class="mb-3">
+                    <label for="title" class="form-label">Nombre del producto</label>
+                    <input type="text" class="form-control" id="title" placeholder="Ingrese el nombre del producto">
+                </div>
+                <div class="mb-3">
+                    <label for="description" class="form-label">Descripción</label>
+                    <input type="text" class="form-control" id="description"
+                        placeholder="Ingrese la descripción del producto">
+                </div>
+                <div class="mb-3">
+                    <label for="price" class="form-label">Precio</label>
+                    <input type="number" class="form-control" id="price" placeholder="Ingrese el precio del producto">
+                </div>
+                <div class="mb-3">
+                    <label for="thumbnails" class="form-label">Imágenes</label>
+                    <input type="text" class="form-control" id="thumbnails" value="Sin imagen">
+                </div>
+                <div class="mb-3">
+                    <label for="code" class="form-label">Código</label>
+                    <input type="text" class="form-control" id="code" placeholder="Ingrese el código del producto">
+                </div>
+                <div class="mb-3">
+                    <label for="stock" class="form-label">Stock</label>
+                    <input type="number" class="form-control" id="stock" placeholder="Ingrese el stock del producto">
+                </div>
+                <div class="mb-3">
+                    <label for="category" class="form-label">Categoría</label>
+                    <input type="text" class="form-control" id="category"
+                        placeholder="Ingrese la categoría del producto">
+                </div>
+                <div class="mb-3">
+                    <label for="status" class="form-label">Estado</label>
+                    <select class="form-select" id="status">
+                        <option value="true">Activo</option>
+                        <option value="false">Inactivo</option>
+                    </select>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="button" class="btnDelete rounded-pill" id="btnSend">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="js/main.js"></script>

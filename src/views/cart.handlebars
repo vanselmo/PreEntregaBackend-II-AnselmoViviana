@@ -1,0 +1,56 @@
+<div class="productsContainerPadre">
+    <div>
+        <h1 class="h2 p-3 text-center">Carrito de compras</h1>
+
+        <div class="row justify-content-center mb-4 productsContainerHijo">
+            <div class="p-3 col-md-6 col-lg-4 border">
+                {{#if products.length}}
+                <ul class="list-group">
+                    {{#each products}}
+                    <li class="list-group-item">
+                        <h5>{{this.product.title}}</h5>
+                        <p>Precio: ${{this.product.price}}</p>
+                        <p>Cantidad: {{this.quantity}}</p>
+                    </li>
+                    {{/each}}
+                </ul>
+                {{else}}
+                <p>No hay productos en el carrito.</p>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+
+    <div class="cart mt-5 p-3">
+        <h2 class="titleForm fs-4">Resumen del carrito</h2>
+
+        <table class="table cart-table">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each cart.products}}
+                <tr>
+                    <td>{{this.product.title}}</td>
+                    <td>${{this.product.price}}</td>
+                    <td>{{this.quantity}}</td>
+                    <td>${{multiply this.quantity this.product.price}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3">Total</td>
+                    <td id="total">${{cartTotal}}</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <button class="btnDelete rounded-pill" onclick="checkout()">Checkout</button>
+    </div>
+</div>

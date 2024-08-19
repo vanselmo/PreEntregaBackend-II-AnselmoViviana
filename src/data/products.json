@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Café de Origen Etiopía",
+    "description": "250 grs de café 100% arábico de la región de Yirgacheffe, Etiopía. Con notas florales y frutales",
+    "price": 450,
+    "thumbnails": [],
+    "code": "code3",
+    "stock": 13,
+    "category": "Cafés",
+    "status": true
+  },
+  {
+    "title": "Café Orgánico de Colombia",
+    "description": "250 grs de café orgánico cultivado en las altas montañas de Colombia. De cuerpo medio y acidez balanceada, presenta notas de chocolate y nueces",
+    "price": 500,
+    "thumbnails": [],
+    "code": "code4",
+    "stock": 14,
+    "category": "Cafés",
+    "status": true
+  },
+  {
+    "title": "Café Especial de Costa Rica",
+    "description": "250 grs de un café de alta calidad proveniente de las fértiles tierras volcánicas de Costa Rica. De sabor suave y aromático con un toque de caramelo",
+    "price": 470,
+    "thumbnails": [],
+    "code": "code5",
+    "stock": 15,
+    "category": "Cafés",
+    "status": true
+  },
+  {
+    "title": "Té Verde Matcha Orgánico",
+    "description": "50 grs de matcha de alta calidad, cultivado y procesado en Japón",
+    "price": 600,
+    "thumbnails": [],
+    "code": "code6",
+    "stock": 16,
+    "category": "Tés Orgánicos",
+    "status": true
+  },
+  {
+    "title": "Té Negro Darjeeling Premium",
+    "description": "50 grs de té negro exquisito de las colinas de Darjeeling, India. Con un sabor floral",
+    "price": 350,
+    "thumbnails": [],
+    "code": "code7",
+    "stock": 17,
+    "category": "Tés Orgánicos",
+    "status": true
+  },
+  {
+    "title": "Té Blanco de Fujian",
+    "description": "50 grs de té blanco puro y orgánico de la provincia de Fujian, China. Con un sabor ligero y dulce, es conocido por sus propiedades antioxidantes",
+    "price": 400,
+    "thumbnails": [],
+    "code": "code8",
+    "stock": 18,
+    "category": "Tés Orgánicos",
+    "status": true
+  },
+  {
+    "title": "Infusión de Hierbas Relajante",
+    "description": "100 grs de una mezcla orgánica de manzanilla, lavanda y menta. Sin cafeína y completamente natural.",
+    "price": 300,
+    "thumbnails": [],
+    "code": "code9",
+    "stock": 19,
+    "category": "Tés Orgánicos",
+    "status": true
+  }
+]
