@@ -11,7 +11,6 @@ router.post("/register", async (req, res) => {
 
     const { username, password, first_name, last_name, age, email, role } = req.body;
     try {
-        console.log("Entre aca");
         const usernameExist = await UserModel.findOne({ username });
         if (usernameExist) {
             return res.status(400).send("El usuario ya existe");
@@ -26,10 +25,7 @@ router.post("/register", async (req, res) => {
             role,
             cart: null
         })
-
-        console.log("Antes del save");
         await newUser.save();
-        console.log("Despues del save");
 
         const token = jwt.sign({ username: newUser.username, role: newUser.role }, 'codersecret', { expiresIn: '2h' });
 
@@ -108,7 +104,6 @@ router.get("/current", passport.authenticate('jwt', { session: false }), async (
         }
     }
 });
-
 
 router.post("/logout", (req, res) => {
     res.clearCookie('coderCookieToken');

@@ -51,9 +51,10 @@ Esto iniciará el servidor en el puerto 8080. Puedes acceder a la API utilizando
 - **PUT /api/carts/:cid**: Actualizar todos los productos de un carrito.
 
 #### Gestión de usuarios
-- **POST /api/users/register** : Registrar un nuevo usuario.
-- **POST /api/users/login** : Autenticar a un usuario y obtener un token JWT.
-- **GET /api/users/current** : Obtener la información del usuario autenticado. Requiere autenticación con JWT.
+- **POST /api/sessions/register** : Registrar un nuevo usuario.
+- **POST /api/sessions/login** : Autenticar a un usuario y obtener un token JWT.
+- **POST /api/sessions/logout**: Borrar cookie y redirigir al usuario al login.
+- **GET /api/sessions/current** : Obtener la información del usuario autenticado. Requiere autenticación con JWT.
 
 Recuerda reemplazar `:pid` y `:cid` con los IDs correspondientes.
 
